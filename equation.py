@@ -14,7 +14,6 @@ class equation():
         self.delta = self.b ** 2 - 4 * self.a * self.c
 
         if self.delta < 0:
-            # print("Result is not real")
             return 2
 
         elif round(math.sqrt(self.delta)) != math.sqrt(self.delta):
