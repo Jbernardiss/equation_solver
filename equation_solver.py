@@ -1,4 +1,5 @@
 
+import sys
 import equation as eq
 
 
@@ -10,6 +11,16 @@ c = int(input("Enter the c: "))
 
 equation = eq.equation(a, b, c)
 
-equation.calculate_delta()
-equation.calculate_results()
+delta_status = equation.calculate_delta()
+
+if delta_status == 0:
+    equation.calculate_results()
+
+elif delta_status == 1:
+    equation.calculate_complex_results()
+
+elif delta_status == 2:
+    print("Result is not real number")
+    sys.exit()
+
 equation.print_results()
